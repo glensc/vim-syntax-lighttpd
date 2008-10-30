@@ -1,7 +1,8 @@
 " Vim syntax file
-" Language:		lighttpd lighttpd
-" Maintainer:	Elan Ruusamae <glen@delfi.ee>
-" Last Change:	$Date$ UTC
+" Language:     lighttpd lighttpd
+" Version Info: $Revision$
+" Maintainer:   Elan Ruusamae <glen@delfi.ee>
+" Last Change:  $Date$ UTC
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
