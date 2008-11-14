@@ -2,7 +2,7 @@
 Summary:	Vim syntax: lighttpd
 Name:		vim-syntax-%{syntax}
 Version:	1.2
-Release:	1
+Release:	2
 License:	Charityware
 Group:		Applications/Editors/Vim
 Source0:	lighttpd.vim
