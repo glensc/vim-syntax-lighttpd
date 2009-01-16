@@ -45,7 +45,7 @@ syn match    lighttpdOption   /mimetype\.\(assign\|use-xattr\)/
 syn match    lighttpdOption   /rrdtool\.\(binary\|db-name\)/
 syn match    lighttpdOption   /server\.\(error-handler-404\|kbytes-per-second\|bind\|tag\|errorlog\|chroot\|dir-listing\)/
 syn match    lighttpdOption   /server\.\(modules\|indexfiles\|document-root\|errorlog-use-syslog\|pid-file\|range-requests\)/
-syn match    lighttpdOption   /server\.\(name\|event-handler\|max-write-idle\|port\|username\|groupname\|errorfile-prefix\)/
+syn match    lighttpdOption   /server\.\(name\|event-handler\|max-write-idle\|max-read-idle\|max-keep-alive-idle\|max-keep-alive-requests\|max-fds\|port\|username\|groupname\|errorfile-prefix\)/
 syn match    lighttpdOption   /static-file\.\(exclude-extensions\|etags\)/
 syn match    lighttpdOption   /status\.\(status-url\|config-url\|statistics-url\)/
 syn match    lighttpdOption   /url\.\(access-deny\|redirect\|rewrite-once\|rewrite\)/
