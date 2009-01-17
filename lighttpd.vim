@@ -14,6 +14,12 @@ endif
 
 syn case match
 
+if version < 600
+	set iskeyword+=.,-
+else
+	setlocal iskeyword+=.,-
+endif
+
 " define the lighttpd syntax
 syn match   lighttpdDelimiter   "[()\[\];,]"
 syn match   lighttpdOperator    "[=|&\*\+\<\>]"
@@ -29,27 +35,72 @@ syn keyword lighttpdKeyword   include include_shell
 syn match   lighttpdSpecial   /"\(dis\|en\)able"/
 
 " module options
-syn match    lighttpdOption   /accesslog\.\(filename\|format\)/
-syn match    lighttpdOption   /alias\.url/
-syn match    lighttpdOption   /auth\.\(debug\|backend\|require\)/
-syn match    lighttpdOption   /auth\.backend\.\(plain\|htpasswd\|htdigest\)\.userfile/
-syn match    lighttpdOption   /auth\.backend\.ldap\.\(hostname\|base-dn\|filter\)/
-syn match    lighttpdOption   /auth\.backend\.plain\.groupfile/
-syn match    lighttpdOption   /debug\.log-\(file-not-found\|\(request\|response\)-header\|\(request\|condition\)-handling\)/
-syn match    lighttpdOption   /dir-listing\.encoding/
-syn match    lighttpdOption   /etag\.use-\(inode\|mtime\|size\)/
-syn match    lighttpdOption   /expire\.url/
-syn match    lighttpdOption   /extforward\.forwarder/
-syn match    lighttpdOption   /fastcgi\.\(server\|debug\|map-extensions\)/
-syn match    lighttpdOption   /mimetype\.\(assign\|use-xattr\)/
-syn match    lighttpdOption   /rrdtool\.\(binary\|db-name\)/
-syn match    lighttpdOption   /server\.\(error-handler-404\|kbytes-per-second\|bind\|tag\|errorlog\|chroot\|dir-listing\)/
-syn match    lighttpdOption   /server\.\(modules\|indexfiles\|document-root\|errorlog-use-syslog\|pid-file\|range-requests\)/
-syn match    lighttpdOption   /server\.\(name\|event-handler\|max-write-idle\|max-read-idle\|max-keep-alive-idle\|max-keep-alive-requests\|max-fds\|port\|username\|groupname\|errorfile-prefix\)/
-syn match    lighttpdOption   /static-file\.\(exclude-extensions\|etags\)/
-syn match    lighttpdOption   /status\.\(status-url\|config-url\|statistics-url\)/
-syn match    lighttpdOption   /url\.\(access-deny\|redirect\|rewrite-once\|rewrite\)/
-syn match    lighttpdOption   /var\.[A-Za-z][A-Za-z0-9]*/
+syn match   lighttpdOption   /var\.[A-Za-z][A-Za-z0-9]*/
+syn keyword lighttpdOption
+	\ accesslog.filename
+	\ accesslog.format
+	\ alias.url
+	\ auth.backend
+	\ auth.backend.htdigest
+	\ auth.backend.htpasswd
+	\ auth.backend.ldap.base-dn
+	\ auth.backend.ldap.filter
+	\ auth.backend.ldap.hostname
+	\ auth.backend.plain
+	\ auth.backend.plain.groupfile
+	\ auth.debug
+	\ auth.require
+	\ debug.log-condition-handling
+	\ debug.log-file-not-found
+	\ debug.log-request-handling
+	\ debug.log-request-header
+	\ debug.log-response-header
+	\ dir-listing.encoding
+	\ etag.use-inode
+	\ etag.use-mtime
+	\ etag.use-size
+	\ expire.url
+	\ extforward.forwarder
+	\ fastcgi.debug
+	\ fastcgi.map-extensions
+	\ fastcgi.server
+	\ mimetype.assign
+	\ mimetype.use-xattr
+	\ rrdtool.binary
+	\ rrdtool.db-name
+	\ server.bind
+	\ server.chroot
+	\ server.dir-listing
+	\ server.document-root
+	\ server.errorfile-prefix
+	\ server.error-handler-404
+	\ server.errorlog
+	\ server.errorlog-use-syslog
+	\ server.event-handler
+	\ server.groupname
+	\ server.indexfiles
+	\ server.kbytes-per-second
+	\ server.max-fds
+	\ server.max-keep-alive-idle
+	\ server.max-keep-alive-requests
+	\ server.max-read-idle
+	\ server.max-write-idle
+	\ server.modules
+	\ server.name
+	\ server.pid-file
+	\ server.port
+	\ server.range-requests
+	\ server.tag
+	\ server.username
+	\ static-file.etags
+	\ static-file.exclude-extensions
+	\ status.config-url
+	\ status.statistics-url
+	\ status.status-url
+	\ url.access-deny
+	\ url.redirect
+	\ url.rewrite
+	\ url.rewrite-once
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
