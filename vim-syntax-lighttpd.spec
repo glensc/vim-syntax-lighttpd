@@ -1,12 +1,13 @@
 %define		syntax	lighttpd
 Summary:	Vim syntax: lighttpd
 Name:		vim-syntax-%{syntax}
-Version:	1.3
+Version:	1.6
 Release:	1
 License:	Charityware
 Group:		Applications/Editors/Vim
 Source0:	lighttpd.vim
 Source1:	vim-ftdetect-lighttpd.vim
+Source2:	lighttpd-vim.sh
 # for _vimdatadir existence
 Requires:	vim-rt >= 4:6.3.058-3
 BuildArch:	noarch
@@ -24,6 +25,7 @@ if [ "$rev" != "%{version}" ]; then
 	: Update version $rev, and retry
 	exit 1
 fi
+cp %{SOURCE2} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -36,5 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc lighttpd-vim.sh
 %{_vimdatadir}/syntax/%{syntax}.vim
 %{_vimdatadir}/ftdetect/%{syntax}.vim
