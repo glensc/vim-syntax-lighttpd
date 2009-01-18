@@ -1,4 +1,10 @@
 #!/bin/sh
+# Script to extract dirtectives from lighttpd source
+# Language:     lighttpd config, http://www.lighttpd.net/
+# Version Info: $Revision$
+# Maintainer:   Elan Ruusamae <glen@pld-linux.org>
+# Last Change:  $Date$ UTC
+
 set -e
 for a in configfile.c mod_*.c; do
 	[ "$a" = "mod_skeleton.c" ] && continue
