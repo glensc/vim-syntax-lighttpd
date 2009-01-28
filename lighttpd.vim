@@ -209,7 +209,7 @@ if version >= 508 || !exists("did_lighttpd_syntax_inits")
   HiLink lighttpdNumber      Number
   HiLink lighttpdFunction    Function
   HiLink lighttpdKeyword     Keyword
-  HiLink lighttpdOption      Option
+  HiLink lighttpdOption      Identifier
   HiLink lighttpdSpecial     Special
   HiLink lighttpdConditional Conditional
   HiLink lighttpdString      String
