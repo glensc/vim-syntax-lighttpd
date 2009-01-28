@@ -1,5 +1,6 @@
 " Vim syntax file
 " Language:     lighttpd config, http://www.lighttpd.net/
+" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/SOURCES/lighttpd.vim
 " Version Info: $Revision$
 " Maintainer:   Elan Ruusamae <glen@pld-linux.org>
 " Last Change:  $Date$ UTC
@@ -21,13 +22,15 @@ else
 endif
 
 " define the lighttpd syntax
-syn match   lighttpdDelimiter   "[()\[\];,]"
-syn match   lighttpdOperator    "[=|&\*\+\<\>]"
+" see also http://redmine.lighttpd.net/wiki/lighttpd/Docs:Configuration
+syn match   lighttpdDelimiter   "[{}()\[\];,]"
+syn match   lighttpdOperator    "[~!=|&\*\+\<\>]"
 syn match   lighttpdComment     "\(#.*\)"
 syn match   lighttpdNumber      "[-+]\=\<\d\+\(\.\d*\)\=\>"
 syn region  lighttpdString      start=+"+ skip=+\\"+ end=+"+
 syn keyword lighttpdConditional else
-syn match   lighttpdServerVar   /\$\(HTTP\|SERVER\)\>/
+syn match   lighttpdServerVar   /\$\(HTTP\|SERVER\|PHYSICAL\)\>/
+syn match   lighttpdFunction    /"\(cookie\|host\|useragent\|referer\|url\|querystring\|remoteip\|scheme\|socket\|path\|existing-path\)"/
 
 " internal keywords
 syn keyword lighttpdKeyword   include include_shell
@@ -204,8 +207,9 @@ if version >= 508 || !exists("did_lighttpd_syntax_inits")
   HiLink lighttpdOperator    Operator
   HiLink lighttpdComment     Comment
   HiLink lighttpdNumber      Number
+  HiLink lighttpdFunction    Function
   HiLink lighttpdKeyword     Keyword
-  HiLink lighttpdOption      Function
+  HiLink lighttpdOption      Option
   HiLink lighttpdSpecial     Special
   HiLink lighttpdConditional Conditional
   HiLink lighttpdString      String
