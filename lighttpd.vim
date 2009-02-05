@@ -141,6 +141,7 @@ syn keyword lighttpdOption
 	\ server.port
 	\ server.protocol-http11
 	\ server.range-requests
+	\ server.reject-expect-100-with-417
 	\ server.stat-cache-engine
 	\ server.tag
 	\ server.upload-dirs
