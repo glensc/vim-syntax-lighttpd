@@ -73,6 +73,7 @@ syn keyword lighttpdOption
 	\ debug.log-response-header
 	\ debug.log-ssl-noise
 	\ debug.log-state-handling
+	\ debug.log-timeouts \
 	\ dir-listing.activate
 	\ dir-listing.encoding
 	\ dir-listing.exclude
