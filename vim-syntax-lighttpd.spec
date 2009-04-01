@@ -1,7 +1,7 @@
 %define		syntax	lighttpd
 Summary:	Vim syntax: lighttpd
 Name:		vim-syntax-%{syntax}
-Version:	1.8
+Version:	1.11
 Release:	1
 License:	Charityware
 Group:		Applications/Editors/Vim
@@ -20,12 +20,14 @@ This plugin provides syntax highlighting for lighttpd config files.
 
 %prep
 %setup -qcT
+cp %{SOURCE2} .
+
+%build
 rev=$(awk '/^".*Revision:/{print $5}' %{SOURCE0})
 if [ "$rev" != "%{version}" ]; then
 	: Update version $rev, and retry
 	exit 1
 fi
-cp %{SOURCE2} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
