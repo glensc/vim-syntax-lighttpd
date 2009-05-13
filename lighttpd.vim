@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:     lighttpd config, http://www.lighttpd.net/
-" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/SOURCES/lighttpd.vim
+" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/vim-syntax-lighttpd/lighttpd.vim
 " Version Info: $Revision$
 " Maintainer:   Elan Ruusamae <glen@pld-linux.org>
 " Last Change:  $Date$ UTC
