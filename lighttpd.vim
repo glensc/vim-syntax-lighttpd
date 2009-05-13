@@ -73,8 +73,11 @@ syn keyword lighttpdOption
 	\ debug.log-response-header
 	\ debug.log-ssl-noise
 	\ debug.log-state-handling
-	\ debug.log-timeouts \
+	\ debug.log-timeouts
 	\ dir-listing.activate
+	\ dir-listing.auto-layout
+	\ dir-listing.encode-header
+	\ dir-listing.encode-readme
 	\ dir-listing.encoding
 	\ dir-listing.exclude
 	\ dir-listing.external-css
@@ -90,9 +93,11 @@ syn keyword lighttpdOption
 	\ evasive.http-status-code
 	\ evasive.max-conns-per-ip
 	\ evasive.retry-after
+	\ evasive.silent
 	\ evhost.path-pattern
 	\ expire.url
 	\ extforward.forwarder
+	\ extforward.headers
 	\ fastcgi.debug
 	\ fastcgi.map-extensions
 	\ fastcgi.server
@@ -115,6 +120,7 @@ syn keyword lighttpdOption
 	\ server.bind
 	\ server.chroot
 	\ server.core-files
+	\ server.defer-accept
 	\ server.dir-listing
 	\ server.document-root
 	\ server.errorfile-prefix
