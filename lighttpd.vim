@@ -60,10 +60,15 @@ syn keyword lighttpdOption
 	\ auth.debug
 	\ auth.require
 	\ cgi.assign
+	\ cgi.execute-x-only
 	\ cml.extension
 	\ cml.memcache-hosts
 	\ cml.memcache-namespace
 	\ cml.power-magnet
+	\ compress.allowed-encodings
+	\ compress.cache-dir
+	\ compress.filetype
+	\ compress.max-filesize
 	\ connection.kbytes-per-second
 	\ debug.log-condition-handling
 	\ debug.log-file-not-found
@@ -118,6 +123,7 @@ syn keyword lighttpdOption
 	\ secdownload.timeout
 	\ secdownload.uri-prefix
 	\ server.bind
+	\ server.breakagelog
 	\ server.chroot
 	\ server.core-files
 	\ server.defer-accept
@@ -161,6 +167,7 @@ syn keyword lighttpdOption
 	\ simple-vhost.default-host
 	\ simple-vhost.document-root
 	\ simple-vhost.server-root
+	\ ssi.content-type
 	\ ssi.extension
 	\ ssl.ca-file
 	\ ssl.cipher-list
