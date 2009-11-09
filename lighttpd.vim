@@ -174,6 +174,11 @@ syn keyword lighttpdOption
 	\ ssl.engine
 	\ ssl.pemfile
 	\ ssl.use-sslv2
+	\ ssl.verifyclient.activate
+	\ ssl.verifyclient.depth
+	\ ssl.verifyclient.enforce
+	\ ssl.verifyclient.exportcert
+	\ ssl.verifyclient.username
 	\ static-file.etags
 	\ static-file.exclude-extensions
 	\ status.config-url
@@ -192,8 +197,10 @@ syn keyword lighttpdOption
 	\ url.redirect
 	\ url.rewrite
 	\ url.rewrite-final
+	\ url.rewrite-if-not-file
 	\ url.rewrite-once
 	\ url.rewrite-repeat
+	\ url.rewrite-repeat-if-not-file
 	\ userdir.basepath
 	\ userdir.exclude-user
 	\ userdir.include-user
