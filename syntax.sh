@@ -5,9 +5,16 @@
 # Maintainer:   Elan Ruusamae <glen@pld-linux.org>
 # Last Change:  $Date$ UTC
 
+d=$1/src
+
+if [ $# = 0 -o ! -d "$d" ]; then
+	echo >&2 "${0#*/}: <lighttpd-src>"
+	exit 1
+fi
+
 set -e
-for a in configfile.c mod_*.c; do
-	[ "$a" = "mod_skeleton.c" ] && continue
+for a in $d/configfile.c $d/mod_*.c; do
+	[[ "$a" = */mod_skeleton.c ]] && continue
 	echo >&2 "# $a"
 	cpp -DHAVE_LSTAT -E $a 2>/dev/null | sed -n '
 	/T_CONFIG_DEPRECATED/d
