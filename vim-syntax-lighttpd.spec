@@ -1,7 +1,7 @@
 %define		syntax	lighttpd
 Summary:	Vim syntax: lighttpd
 Name:		vim-syntax-%{syntax}
-Version:	1.15
+Version:	1.16
 Release:	1
 License:	Charityware
 Group:		Applications/Editors/Vim
