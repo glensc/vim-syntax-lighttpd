@@ -1,19 +1,18 @@
 %define		syntax	lighttpd
 Summary:	Vim syntax: lighttpd
 Name:		vim-syntax-%{syntax}
-Version:	1.16
+Version:	1.17
 Release:	1
 License:	Charityware
 Group:		Applications/Editors/Vim
 Source0:	lighttpd.vim
 Source1:	ftdetect.vim
 Source2:	syntax.sh
-# for _vimdatadir existence
-Requires:	vim-rt >= 4:6.3.058-3
+Requires:	vim-rt >= 4:7.2.170
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_vimdatadir	%{_datadir}/vim/vimfiles
+%define		_vimdatadir	%{_datadir}/vim
 
 %description
 This plugin provides syntax highlighting for lighttpd config files.
