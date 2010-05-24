@@ -39,6 +39,7 @@ syn match   lighttpdSpecial   /"\(dis\|en\)able"/
 
 " module options
 syn match   lighttpdOption   /var\.[A-Za-z][_A-Za-z0-9]*/
+syn match   lighttpdOption   /env\.[A-Za-z][_A-Za-z0-9]*/
 syn keyword lighttpdOption
 	\ accesslog.filename
 	\ accesslog.format
