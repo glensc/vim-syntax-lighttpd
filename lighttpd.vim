@@ -202,6 +202,7 @@ syn keyword lighttpdOption
 	\ url.rewrite-once
 	\ url.rewrite-repeat
 	\ url.rewrite-repeat-if-not-file
+	\ userdir.active
 	\ userdir.basepath
 	\ userdir.exclude-user
 	\ userdir.include-user
