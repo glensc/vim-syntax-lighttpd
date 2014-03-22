@@ -1,9 +1,8 @@
 " Vim syntax file
 " Language:     lighttpd config, http://www.lighttpd.net/
-" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/vim-syntax-lighttpd/lighttpd.vim
-" Version Info: $Revision$
+" URL:          https://github.com/glensc/vim-syntax-lighttpd
+" Version Info: 1.18
 " Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
-" Last Change:  $Date$ UTC
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded

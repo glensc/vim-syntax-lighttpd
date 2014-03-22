@@ -1,9 +1,7 @@
 #!/bin/sh
 # Script to extract dirtectives from lighttpd source
 # Language:     lighttpd config, http://www.lighttpd.net/
-# Version Info: $Revision$
 # Maintainer:   Elan Ruusamae <glen@pld-linux.org>
-# Last Change:  $Date$ UTC
 
 d=$1/src
 
