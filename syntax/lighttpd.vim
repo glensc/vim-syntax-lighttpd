@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     lighttpd config, http://www.lighttpd.net/
 " URL:          https://github.com/glensc/vim-syntax-lighttpd
-" Version Info: 1.18
+" Version Info: 1.19
 " Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
 
 " For version 5.x: Clear all syntax items
@@ -42,6 +42,7 @@ syn match   lighttpdOption   /env\.[A-Za-z][_A-Za-z0-9]*/
 syn keyword lighttpdOption
 	\ accesslog.filename
 	\ accesslog.format
+	\ accesslog.syslog-level
 	\ accesslog.use-syslog
 	\ alias.url
 	\ auth.backend
@@ -129,8 +130,8 @@ syn keyword lighttpdOption
 	\ server.defer-accept
 	\ server.dir-listing
 	\ server.document-root
-	\ server.errorfile-prefix
 	\ server.error-handler-404
+	\ server.errorfile-prefix
 	\ server.errorlog
 	\ server.errorlog-use-syslog
 	\ server.event-handler
@@ -155,6 +156,7 @@ syn keyword lighttpdOption
 	\ server.protocol-http11
 	\ server.range-requests
 	\ server.reject-expect-100-with-417
+	\ server.set-v6only
 	\ server.stat-cache-engine
 	\ server.tag
 	\ server.upload-dirs
@@ -171,14 +173,21 @@ syn keyword lighttpdOption
 	\ ssi.extension
 	\ ssl.ca-file
 	\ ssl.cipher-list
+	\ ssl.dh-file
+	\ ssl.disable-client-renegotiation
+	\ ssl.ec-curve
+	\ ssl.empty-fragments
 	\ ssl.engine
+	\ ssl.honor-cipher-order
 	\ ssl.pemfile
 	\ ssl.use-sslv2
+	\ ssl.use-sslv3
 	\ ssl.verifyclient.activate
 	\ ssl.verifyclient.depth
 	\ ssl.verifyclient.enforce
 	\ ssl.verifyclient.exportcert
 	\ ssl.verifyclient.username
+	\ static-file.disable-pathinfo
 	\ static-file.etags
 	\ static-file.exclude-extensions
 	\ status.config-url
@@ -195,6 +204,7 @@ syn keyword lighttpdOption
 	\ trigger-before-download.trigger-url
 	\ url.access-deny
 	\ url.redirect
+	\ url.redirect-code
 	\ url.rewrite
 	\ url.rewrite-final
 	\ url.rewrite-if-not-file
