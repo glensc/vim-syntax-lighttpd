@@ -1,25 +1,35 @@
 vim lighttpd syntax
 ===================
 
-syntax highlighting for lighttpd config files. 
-
-lighttpd (lighty) is lightweight open-source web server: http://www.lighttpd.net/ 
+This vim bundle adds syntax highlighting for [lighttpd](http://www.lighttpd.net/) configuration files.
 
 always recent version can be grabbed from:
 https://github.com/glensc/vim-syntax-lighttpd/
  
+## Installing and Using ##
 
-install details
-===============
+- Install and configure [pathogen](https://github.com/tpope/vim-pathogen)
 
-
-- for local install:`PREFIX=~/.vim` 
-- for global install (requries root privileges): `PREFIX=/usr/share/vim/vimfiles`
-
-
-and then run: 
+- Make a clone of the `vim-syntax-lighttpd` repository:
 ```
-mkdir -p $PREFIX/{syntax,ftdetect} 
-cp syntax/lighttpd.vim $PREFIX/syntax/lighttpd.vim 
-cp ftdetect/lighttpd.vim $PREFIX/ftdetect/lighttpd.vim 
+$ mkdir -p ~/.vim/bundle
+$ cd ~/.vim/bundle
+$ git clone https://github.com/glensc/vim-syntax-lighttpd.git
 ```
+
+- OR use git submodules:
+```
+$ git submodule add https://github.com/glensc/vim-syntax-lighttpd.git bundle/vim-syntax-lighttpd
+$ git submodule init
+```
+
+That's it. Pathogen should handle the rest. Opening a file that matches `/etc/lighttpd/**.conf`,`/usr/local/etc/lighttpd/**.conf` or `lighttpd*.conf` will load everything.
+
+## Credits ##
+
+ - Author [Elan Ruusamäe](https://github.com/glensc)
+ - README.md derived from [vim-less](https://github.com/groenewege/vim-less) by [Jase Thew](https://github.com/jaset)
+
+## License ##
+
+Same as Vim License: http://www.vim.org/about.php
