@@ -1,5 +1,5 @@
 #!/bin/sh
-# Script to extract dirtectives from lighttpd source
+# Script to extract directives from lighttpd source
 # Language:     lighttpd config, http://www.lighttpd.net/
 # Maintainer:   Elan Ruusamae <glen@pld-linux.org>
 
