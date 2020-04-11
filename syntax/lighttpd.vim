@@ -39,6 +39,13 @@ syn match   lighttpdSpecial   /"\(dis\|en\)able"/
 " module options
 syn match   lighttpdOption   /var\.[A-Za-z][_A-Za-z0-9]*/
 syn match   lighttpdOption   /env\.[A-Za-z][_A-Za-z0-9]*/
+" Options no longer present (removed of come from external patch)
+syn keyword lighttpdRemovedOption
+	\ auth.debug
+	\ evasive.http-status-code
+	\ evasive.retry-after
+	\ h264-streaming.extensions
+" Options present in current lighttpd version
 syn keyword lighttpdOption
 	\ accesslog.filename
 	\ accesslog.format
