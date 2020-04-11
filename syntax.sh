@@ -14,7 +14,8 @@ set -e
 for a in $d/configfile.c $d/mod_*.c; do
 	[[ "$a" = */mod_skeleton.c ]] && continue
 	echo >&2 "# $a"
-	cpp -DHAVE_LSTAT -E $a 2>/dev/null | sed -n '
+	# replace NULL with 0, so that the definitions do not go multiline
+	sed -e 's/NULL/0/g' "$a" | cpp -DHAVE_LSTAT -E -I "$d" 2>/dev/null | sed -n '
 	/T_CONFIG_DEPRECATED/d
 
 	# skip fastcgi.server
