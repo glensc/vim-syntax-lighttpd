@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     lighttpd config, http://www.lighttpd.net/
 " URL:          https://github.com/glensc/vim-syntax-lighttpd
-" Version Info: 1.19
+" Version Info: 1.20
 " Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
 
 " For version 5.x: Clear all syntax items
