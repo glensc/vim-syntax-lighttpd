@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:     lighttpd config, http://www.lighttpd.net/
+" Language:     lighttpd config, https://www.lighttpd.net/
 " URL:          https://github.com/glensc/vim-syntax-lighttpd
 " Version Info: 1.20
 " Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
@@ -21,7 +21,7 @@ else
 endif
 
 " define the lighttpd syntax
-" see also http://redmine.lighttpd.net/wiki/lighttpd/Docs:Configuration
+" see also https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_Configuration
 syn match   lighttpdDelimiter   "[{}()\[\];,]"
 syn match   lighttpdOperator    "[~!=|&\*\+\<\>]"
 syn match   lighttpdComment     "\(#.*\)"

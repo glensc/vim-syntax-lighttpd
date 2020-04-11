@@ -1,6 +1,6 @@
 #!/bin/sh
 # Script to extract directives from lighttpd source
-# Language:     lighttpd config, http://www.lighttpd.net/
+# Language:     lighttpd config, https://www.lighttpd.net/
 # Maintainer:   Elan Ruusamae <glen@pld-linux.org>
 
 d=$1/src

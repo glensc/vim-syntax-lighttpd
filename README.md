@@ -1,7 +1,7 @@
 vim lighttpd syntax
 ===================
 
-This vim bundle adds syntax highlighting for [lighttpd](http://www.lighttpd.net/) configuration files.
+This vim bundle adds syntax highlighting for [lighttpd](https://www.lighttpd.net/) configuration files.
 
 always recent version can be grabbed from:
 https://github.com/glensc/vim-syntax-lighttpd/
@@ -32,4 +32,4 @@ That's it. Pathogen should handle the rest. Opening a file that matches `/etc/li
 
 ## License ##
 
-Same as Vim License: http://www.vim.org/about.php
+Same as Vim License: https://www.vim.org/about.php
